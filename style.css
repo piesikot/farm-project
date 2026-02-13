@@ -255,14 +255,25 @@ span a {
 }
 /* fix shrinking video issue */
 /* po ustawieniu max-with 910px o dziwo się naprawia :O */
+/* ale musi być też ustawiony top 75px i od max-with 438 znowu nie działa */
+/* ! FIX zrobić refaktoring tego video */
 @media only screen and (max-width: 910px) {
   .video-container {
     width: 100%;
+    height: 100%;
     z-index: -10;
     top: 75px;
     /* why top has white backgroud? */
   }
 }
+@media only screen and (max-width: 438px) {
+   .video-container {
+    width: 100%;
+    height: 100%;
+    top:120px;
+   }
+}
+
 /* Mobile-S resolution */
 @media only screen and (max-width: 320px) {
   .logo-container {
