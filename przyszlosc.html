@@ -17,15 +17,26 @@
         font-size: clamp(14px, 2.3vw, 20px);
         padding: 0 100px;
     }
-      .future, h3{ 
+      .future, h2, h3, h4, h5 { 
         padding: 20vh 0;
         font-weight: 100;
     }
-    ol {
-        text-align: left;
-        padding: 0 100px;
+
+    ul h4{
+        padding: 20px;;
+        /* color: red; */
     }
-    
+    .org-list ul li {
+        padding: 10px;
+        list-style-type: none;
+    }
+    ul li a {
+        color: black;
+        text-decoration: none;  
+    }
+    ul li a:hover span.underline {
+        text-decoration: underline;
+    } 
 </style>
 <body>
     <div class="container">
@@ -54,44 +65,37 @@
 
         <!-- Treść strony jest satyryczną parafrazą polityki firmy Sokołów S.A. -->
         
-                  <!-- <h1>TBC</h1> -->
-
-                  <!-- <main>
-                    <header>
-                <h1>Weganizm to przyszłość!</h1>
-               
-                    </header> -->
-
-  <header>
-                <span class="future">
-                    <!-- Zrobić animowane tło -->
-                     <!-- https://www.vecteezy.com/video/50144448-a-fresh-uncooked-red-pork-belly-slices-are-flying-through-the-air -->
-                    <!-- https://www.vecteezy.com/video/36623687-chopped-red-meat-display-at-local-store -->
-                <h1>Wegański świat to przyszłość!</h1>
-                <!-- <h2>Czy się zgadzasz?</h2> -->
-                </span>
-            </header>
+                    
+                <header>
+                    <span class="future">
+                        <h1>Wegański świat to przyszłość!</h1>
+                    </span>
+                </header>
 
             <main>
-                <h4>Naszą prawdziwą misją jest świat bez okrucieństwa wobec zwierząt.</h4>
-                 <span>Czy zgadzasz się z tym, że przyszłość nie będzie już oparta na wykorzystywaniu zwierząt? Jeśli chcesz takiej przyszłości, to zacznij działać już dziś!  Pamiętaj, że Wszystkie formy wykorzystywania zwierząt są nieetyczne i powodują ich cierpienie.</span>
-                <h2>Co możesz zrobić?</h2>
-                <h3>Chcąc żyć w zgodzie z wegańskimi wartościami, w pierwszej kolejności należy odstawić wszystkie produkty pochodzące od zwierząt: żywność, kosmetyki i chemia domowa, ubrania i akcesoria, farmaceutyki i suplementy, wszelkie produkty codziennego użytku - jest to minimum, które powinien spełniać każdy człowiek, który chce żyć zgodnie z etyką.</h3>
-                <h4>Aktywizm - kolejną rzeczą, którą można zrobić jest działalność społeczna mająca na celu zwiększenie świadomości społecznego problemu wykorzystywania zwierząt.</h4>
-                <ol>Oto kilka przykładów organizacji, które zajmują się aktywizmem na rzecz zwierząt:</ol>
-                    <li>
-                <a href="kariera.html"><b>Piesik od Pokoleń</b></a> - Wolontariat w mediach społecznościowych naszej farmy! Poza tym, w przyszłści planujemy organizawać różne wydarzenia, takie jak: warsztaty, prelekcje, happeningi, demonstracje, zbiórki charytatywne i inne. Współpracujemy również z innymi organizacjami i aktywistami, aby wspólnie działać na rzecz zwierząt.
-                    </li>
-                    <li>
-                <a href=https://www.anonymousforthevoiceless.org><b>Anonymous for the Voiceless</b></a> - organizacja, która zajmuje się aktywizmem ulicznym w postaci happeningów, zwanych Sześcianami Prawdy. Mają one na celu wzbudzenie w ludziach poczucia odpowiedzialności za los zwierząt, i zwiększenie świadomości na temat okrucieństwa, jakie jest im wyrządzane przez nieświadomych niewegan. Organizacja ta działa na całym świecie.
-                    </li>
-                    <li>
-                        <a href=https://viva.org.pl><b>Fundacja Viva!</b></a> - zajmująca się zarówno aktywizmem ulicznym, jak i kampaniami społecznymi, edukacją, pomocą zwierzętom i innymi formami działalności na rzecz zwierząt. Działają głównie w Polsce, ale mają również oddziały w innych krajach.
-                    </li>
-                    <li>
-                        <a href="https://www.activism.wtf/"><b>Activism.wtf</b></a> - zajmuje się aktywizmem w formie kampanii internetowych edukacyjnych, i ulicznych. Działają na całym świecie.
-                    </li>
+                <h2>Naszą prawdziwą misją jest stworzenie świata bez okrucieństwa wobec zwierząt.</h2>
+                <h3>Jeśli też chcesz  przyszłości bez wykorzystywania,  zacznij działać już dziś!</h3>
+                <h4>Co możesz zrobić?</h4>
+                <span>Chcąc żyć w zgodzie z wegańskimi wartościami, w pierwszej kolejności należy odstawić wszystkie produkty odzwierzęce: żywność, kosmetyki i chemia domowa, ubrania i akcesoria, farmaceutyki i suplementy, wszelkie produkty codziennego użytku - jest to absolutne minimum, które powinien spełniać każdy człowiek, który uważa się za  człowieka, który postępuje w życiu etycznie.</span>
                 
+                <h4>Aktywizm - kolejnym krokiem,który można podjąć jest działalność społeczna mająca na celu zwiększenie świadomości społecznego problemu wykorzystywania zwierząt. Zwierzęta nas potrzebują! </h4>
+                
+                <div class="org-list">
+                    <ul><h4 class="org-list-title">Oto kilka przykładów organizacji, które zajmują się aktywizmem na rzecz zwierząt:</h4>
+                        <li> 
+                            <a href="https://www.messenger.com/t/477358212314248/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"><b><span class="underline">Piesik od Pokoleń</span></b> - Wolontariat w mediach społecznościowych naszej farmy! Poza aktywizmem internetowym, w przyszłści będzie także organizawać różne wydarzenia uliczne. </a> 
+                            </li>
+                        <li>
+                            <a href=https://www.anonymousforthevoiceless.org><b><span class="underline">Anonymous for the Voiceless</b></span> - organizacja, która zajmuje się aktywizmem ulicznym w postaci happeningów, zwanych Sześcianami Prawdy. Mają one na celu wzbudzenie w ludziach poczucia odpowiedzialności za los zwierząt, i zwiększenie świadomości na temat okrucieństwa, jakie jest im wyrządzane przez nieświadomych niewegan. Organizacja ta działa na całym świecie.</a>
+                        </li>
+                        <li>
+                            <a href=https://viva.org.pl><b><span class="underline">Fundacja Viva!</span></b> - zajmująca się zarówno aktywizmem ulicznym, jak i kampaniami społecznymi, edukacją, pomocą zwierzętom i innymi formami działalności na rzecz zwierząt. Działają głównie w Polsce, ale mają również oddziały w innych krajach.</a>
+                        </li>
+                        <li>
+                            <a href="https://www.activism.wtf/"><b><span class="underline">Activism.wtf</span></b> - zajmuje się aktywizmem w formie kampanii internetowych edukacyjnych, i ulicznych. Działają na całym świecie.</a>
+                        </li>
+                    </ul>
+                </div>
                 <!-- a href zobacz więcej https://sokolowsa.pl/firma/razem-w-przyszlosc -->
                 
 
