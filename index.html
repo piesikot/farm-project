@@ -23,7 +23,7 @@
 <style>
 .menu__farm{
     text-decoration: underline;
-}
+/* }
     .alert{
     position: absolute;
     height: 80%;
@@ -34,7 +34,7 @@
     margin: auto;
     display: flex;
     justify-content: center;
-    }
+    } */
 
 /* alert */
  .alert span{
@@ -49,11 +49,9 @@
     font-weight: 600;
     padding: 10px;
     flex-wrap: wrap;
-
     background-color: black;
     height:60%;
     opacity: 0.8;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -69,32 +67,32 @@
 </style>
 <body>
     <div class="container">
-        <div class="wrapper">
-                <div class="top">
-                    <div class="logo-container">
-                        <img class="logo" src="src/PoP-logo.svg" alt="logo Piesik od Pokoleń ">
-                    </div>
-                    <ul class="menu">
-                        <li class="menu__farm"><a href="index.html">Farma</a></li>
-                        <li class="menu__news"><a href="aktualnosci.html">Aktualności</a></li>
-                        <ul class="menu__products-list"><a href="produkty.html">Produkty</a></li>
-                                <!-- <li>Psina</li>
-                                <li>Nabiał</li>
-                                <li>Szczenięcina</li>
-                                <li>Kocina</li> -->
-                            </ul>    
-                            <li class="menu__contact"><a href="kontakt.html">Kontakt</a></li>
-                            <li class="menu__mission"><a href="misja.html">Nasza Misja</a></li>
-                    </ul>
+        <!-- <div class="wrapper"> -->
+            <div class="top">
+                <div class="logo-container">
+                    <img class="logo" src="src/PoP-logo.svg" alt="logo Piesik od Pokoleń ">
                 </div>
-                <div class="logo-container-media">
-                    <img class="logo" src="src/logo.svg" alt="logo e-Pies">
-                </div>
-                <header>
-                    <h1>Piesik od Pokoleń S.A.</h1>
-                    <h2>Psie mięso to przyszłość!</h2>
-                </header>
+                <ul class="menu">
+                    <li class="menu__farm"><a href="index.html">Farma</a></li>
+                    <li class="menu__news"><a href="aktualnosci.html">Aktualności</a></li>
+                    <ul class="menu__products-list"><a href="produkty.html">Produkty</a></li>
+                        <!-- <li>Psina</li>
+                        <li>Nabiał</li>
+                        <li>Szczenięcina</li>
+                        <li>Kocina</li> -->
+                        </ul>    
+                        <li class="menu__contact"><a href="kontakt.html">Kontakt</a></li>
+                        <li class="menu__mission"><a href="misja.html">Nasza Misja</a></li>
+                </ul>
             </div>
+            <div class="logo-container-media">
+                <img class="logo" src="src/logo.svg" alt="logo e-Pies">
+            </div>
+            <header>
+                <h1>Piesik od Pokoleń S.A.</h1>
+                <h2>Psie mięso to przyszłość!</h2>
+            </header>      
+        <!-- </div> -->
             <div class="adventages-container">
                 <div class="pro-container">
                     <div class="pro-img">
@@ -140,7 +138,7 @@
                         <source src='src/video/explore.webm' type='video/webm' />
                     </video>
                 </div>
-    </div>
+            </div>
         </div>
         
     <div class="farm">
@@ -240,11 +238,14 @@
         </div>
     </footer>
 
-    
+
+<!-- Wyłączam alert. -->
+<!--     
 <div class="alert">
     <span>Uwaga! Strona w trakcie budowy. Niektóre rzeczy mogą nie działać poprawnie.</span>
     <button id="alert-button">OK</button>
 </div>
+ -->
 
 <script>
     let alert_window = document.querySelector('.alert');
