@@ -94,19 +94,33 @@ html {
 .bottom {
   display: none;
 }
+.wrapper {
+  /* background-color: red; */
+  background-color: #ffffff;
+  z-index: -4 !important;
+  /* why not working? */
+  opacity: 0.5;
+}
+.wrapper h1, h2{
+  /* color: #000000; */
+  opacity: 1;
+}
 .menu {
   display: flex;
   justify-content: flex-end;
-  /* padding: 0vw 3vw 0 3vw; */
+  padding: 2vw 3vw 2vw 3vw;
   list-style: none;
   gap: 6vw;
   font-size: clamp(11px, 2vw, 20px); /* pozostawione */
   /* margin-bottom: auto; */
-  color: #000000;
+  /* background-color: black; */
+  opacity: 1;
 }
 .menu a {
-  color: #000000;
+  color: black;
   text-decoration: none;
+  opacity: 1;
+  z-index: 10;
 }
 
 .menu .menu__products-list {
@@ -149,13 +163,6 @@ h5 {
 }
 h6 {
   font-size: clamp(9px, 1vw, 14px);
-}
-.wrapper {
-  /* background-color: red; */
-  /* background-color: #ffffff; */
-  /* z-index: -100!important; */
-  /* why not working? */
-  opacity: 0.5;
 }
 .adventages-container {
   display: flex;
@@ -293,12 +300,6 @@ footer {
 span a {
   color: #ffffff;
   text-decoration: none;
-}
-
-/* Refaktoryzacja */
-.top a, .menu, header{
-  /* color: #000000; */
-  color: whitesmoke;
 }
 
 /* fix shrinking video issue */
