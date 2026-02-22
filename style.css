@@ -72,7 +72,7 @@ html {
 } */
 
 .logo {
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
   width: clamp(25px, 6vw, 300px);
   padding: 2vw;
 }
@@ -114,7 +114,7 @@ html {
   font-size: clamp(11px, 2vw, 20px); /* pozostawione */
   /* margin-bottom: auto; */
   /* background-color: black; */
-  opacity: 1;
+  /* opacity: 1; */
 }
 .menu a {
   color: black;
@@ -273,39 +273,93 @@ h6 {
   font-size: clamp(12px, 1.2vw, 18px); /* zmniejszone max */
 }
 
+
+/* 🛠 Refaktoryzuję footer 🛠*/
+
 footer {
   background: #000;
   color: #ffffff;
-  text-align: center;
-  padding: 10px 0;
-  font-size: clamp(10px, 1.4vw, 18px); /* pozostawione */
-  display: flex;
-  justify-content: center;
+  /* text-align: center; */
+  /* padding: 10px 0; */
+   
+  /* display: flex; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* align-items: space-between; */
 
-  margin-top: 30px;
+  /* margin-top: 30px; */
+    /* justify-content: center; */
 }
+
+/* ⓘten wrapper jednak okazał się zbędny */
 .footer-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* gap: 5px; */
+    /* gap: 10rem;  */
+    /* padding: 15rem;   odstęp OD KRAWĘDZI kontenera */
+  /* align-items: space-between; */
+    /* justify-content: center; */
 }
 .footer-menu {
   display: flex;
-  gap: 50px;
-}
-.copyright {
-  display: flex;
-  justify-content: center;
-}
-span a {
-  color: #ffffff;
-  text-decoration: none;
+  /* justify-content: center; */
+  /* align-items: space-evenly; */
+
+    gap: 1.5em;
+    /*ⓘ ^odstęp^ MIĘDZY elementami PIONOWY */
+
+    padding: 1.5em;
+    /*ⓘ ^odstęp^ OD KRAWĘDZI kontenera  */
+
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-/* fix shrinking video issue */
-/* po ustawieniu max-with 910px o dziwo się naprawia :O */
-/* ale musi być też ustawiony top 75px i od max-with 438 znowu nie działa */
-/* ! FIX zrobić refaktoring tego video */
+.footer-button{
+  color: red;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.2;
+
+/* daje ~40–44px wysokości */
+  /* padding: 16px;  */
+
+  /* min-height: 44px; */
+  /* padding: 44px; */
+  /* margin: 4rem; */
+}
+
+.footer-menu__copyright {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-basis: 100%;
+  text-align: center;
+}
+
+
+
+/* 🛠 Refaktoryzuję video 🛠*/
+
+/* 
+ @media only screen and (max-width: 342px) { */
+
+  .video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+/* } */
+
+
+/* 🐛FIX video na małych ekranach robi się zoom 🐛 */
 
 
 /* ⚠ ważne, żeby komentarze pisać nad kodem, bo CSS nie obsługuje zagnieżdżania komentarzy i potem  trudo zakomentować*/
@@ -363,21 +417,5 @@ span a {
 }  */
 
 
-/* Refaktoryzuję */
-/* 
- @media only screen and (max-width: 342px) { */
-  .video-container video {
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-  }
-/* } */
-
-
-
-/* script to turn off video: */
+/* 🔧 ↓ WYŁĄCZANIE video:↓ 🔧 */
 /* video{ display: none; *{ background: #000; } */
