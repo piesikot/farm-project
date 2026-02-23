@@ -7,29 +7,70 @@ html {
   /* background: #
   000; */
   z-index: -10;
-  /* max-width: 100%; */
+  max-width: 100%;
   height: 100%;
 }
 
-/* ⓘ Ustawienie media query z top:0 jest sposobem na problem zmniejszającego się video */
+
+/* 🛠 Refaktoryzuję video 🛠 */
+
+/* ⓘ Ustawienie media query z top:0 jest ewentualnym sposobem na problem zmniejszającego się video LUB ustawienie media query z margin-top na minusie*/
+
+    /* ⓘ  position: fixed na video-container daje ten fajny efekty przy scrollowaniu, który chcę uzyskać, ale przy małych lepiej zrobić position: static  ; */
+
 .video-container {
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  /* bottom: 0; */
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  background: #000; */
+
+  /* border: dotted 5px red; */
+  /* box-sizing: border-box; */
+
+
+    /* position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
   z-index: -3;
   background: #000;
+  overflow: hidden; */
 
-  /* border: dotted 5px red; */
-  /* box-sizing: border-box; */
+
+    /* position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  background: #000;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  overflow: hidden;
+  background: #000;
+  
+
 }
 
 /* 🐛 od width 342 video się zmniejsza */
-
 /* 🐛 od width ok. 330 napisy przestają się mieścić*/
-.video-container video {
-    /* border: dotted 5px blue; */
+
+/* Teraz się zmniejsza od 612. Wcześniej chyba też tak było, ale obraz był ucięty.(CHYBA)! */
+
+  /* Jaakoś tam dzaiła na małych ekranach ale 🐛jest za bardzo zoomowane🐛 */
+
+  /* @media only screen and (max-width: 342px) { */
+
+ .video-container video {
+
+  /* border: dotted 5px blue; */
     /* box-sizing: border-box; */
 
   /* width: 100%; */
@@ -54,25 +95,60 @@ html {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    */
-}
+    transform: translateX(-50%) translateY(-50%); */
 
-  /* Jaakoś tam dzaiła na małych ekranach */
-  /* @media only screen and (max-width: 342px) {
-  .video-container video {
-    min-width: 100%;
+  
+      /* min-width: 100%;
     min-height: 100%;
     object-fit: cover;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);  */
+
+  /* width: 100%;
+  height: 100%;
+  object-fit:fill;
+  display: block; */
+
+    /* width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block; */
+
+    /* width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block; */
+/* 
+    margin-top: -50vw;
+  margin-right: -50vw;
+   object-fit: fill;  */
+
+    
+   /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* min-width: 100%; */
+  /* min-height: 100%; */
+  /* width: auto; */
+  /* height: auto; */
+  /* object-fit: cover; */
+
+  /* !  TO USTAWIENIE, PLUS DOPRACOWAĆ BREAK POINT i scale,   ! */
+  /* object-fit: contain; */
+  /* transform: translate(-50%, -50%) scale(0.7); */
+  
   }
-} */
+/* } */
+
+
+
 
 .logo {
-  /* filter: brightness(0) invert(1); */
+  filter: brightness(0) invert(1);
   width: clamp(25px, 6vw, 300px);
   padding: 2vw;
 }
@@ -96,14 +172,16 @@ html {
 }
 .wrapper {
   /* background-color: red; */
-  background-color: #ffffff;
-  z-index: -4 !important;
+  /* background-color: #ffffff; */
+  /* z-index: -4 !important; */
   /* why not working? */
-  opacity: 0.5;
+
+
+  /* opacity: 0.5; */
 }
 .wrapper h1, h2{
   /* color: #000000; */
-  opacity: 1;
+  /* opacity: 1; */
 }
 .menu {
   display: flex;
@@ -115,12 +193,16 @@ html {
   /* margin-bottom: auto; */
   /* background-color: black; */
   /* opacity: 1; */
+
+  color: white;
 }
 .menu a {
   color: black;
   text-decoration: none;
   opacity: 1;
   z-index: 10;
+
+  color: white;
 }
 
 .menu .menu__products-list {
@@ -143,14 +225,17 @@ header {
 h1 {
   text-align: center;
   font-size: clamp(22px, 4vw, 148px); /* unchanged */
-  margin: 0;
+  margin: 0;color:
+  
+  white;
 }
 h2 {
   font-size: clamp(
     14px,
     2.2vw,
     28px
-  ); /* zmniejszone max i mniej agresywne vw */
+  );
+  color: white;
 }
 h3 {
   font-size: clamp(16px, 2.6vw, 30px); /* mniejszy skok na desktopie */
@@ -274,7 +359,7 @@ h6 {
 }
 
 
-/* 🛠 Refaktoryzuję footer 🛠*/
+/*  ✓ footer po refaktoryzacji ✓ */
 
 footer {
   background: #000;
@@ -339,14 +424,19 @@ footer {
   text-align: center;
 }
 
+/* ↑ ✓ footer po refaktoryzacji ✓ ↑ */
 
 
-/* 🛠 Refaktoryzuję video 🛠*/
+/* ⚠ ważne, żeby komentarze pisać nad kodem, bo CSS nie obsługuje zagnieżdżania komentarzy i potem  trudo zakomentować*/
 
+/* 🔧 ↓ WYŁĄCZANIE video:↓ 🔧 */
+/* video{ display: none; *{ background: #000; } */
+
+/* Śmieci */
 /* 
  @media only screen and (max-width: 342px) { */
 
-  .video-container video {
+  /* .video-container video {
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
@@ -354,15 +444,13 @@ footer {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-  }
+  } */
 
 /* } */
 
 
 /* 🐛FIX video na małych ekranach robi się zoom 🐛 */
 
-
-/* ⚠ ważne, żeby komentarze pisać nad kodem, bo CSS nie obsługuje zagnieżdżania komentarzy i potem  trudo zakomentować*/
 
 
 /* ↓ WYŁĄCZAM WSZYSKTKIE BRAKPOINTY ↓ */
@@ -417,5 +505,4 @@ footer {
 }  */
 
 
-/* 🔧 ↓ WYŁĄCZANIE video:↓ 🔧 */
-/* video{ display: none; *{ background: #000; } */
+
