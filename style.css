@@ -1,150 +1,32 @@
+/* ⚠ ważne, żeby komentarze pisać nad kodem, bo CSS nie obsługuje zagnieżdżania komentarzy i potem  trudo zakomentować*/
+
+
+/* 🛠 ↓ Refaktoryzuję fonty, rozmiary i menu ↓ 🛠 */
+/* - Zrobić czarne menu i czarne tło pod video */
 body,
 html {
   margin: 0;
 }
 
 .container {
-  /* background: #
-  000; */
   z-index: -10;
   max-width: 100%;
   height: 100%;
 }
 
+/* 🔧 ↓ WYŁĄCZANIE video:↓ 🔧 */
+/* video {display: none;} */
 
-/* 🛠 Refaktoryzuję video 🛠 */
 
-/* ⓘ Ustawienie media query z top:0 jest ewentualnym sposobem na problem zmniejszającego się video LUB ustawienie media query z margin-top na minusie*/
-
-    /* ⓘ  position: fixed na video-container daje ten fajny efekty przy scrollowaniu, który chcę uzyskać, ale przy małych lepiej zrobić position: static  ; */
-
+/* ↓  ✓ Video po refaktoryzacji ↓ ✓ */
 .video-container {
-  /* position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -3;
-  background: #000; */
-
-  /* border: dotted 5px red; */
-  /* box-sizing: border-box; */
-
-
-    /* position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -3;
-  background: #000;
-  overflow: hidden; */
-
-
-    /* position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -3;
-  background: #000;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
-
-  /* position: fixed;
+  position: fixed;
   inset: 0;
   z-index: -3;
   overflow: hidden;
-  background: #000; */
-  
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%; 
-  /* overflow: hidden; */
-  /* ↑ powodowało ucięte napisy na laptopie ↑ */
-  z-index: -3;
+  background: #000;
+  /* background: #000 url('path/to/image.jpg') center/cover; */
 }
-
-
-  /* Jaakoś tam dzaiła na małych ekranach ale 🐛jest za bardzo zoomowane🐛 */
-
-  /* */
-
- .video-container video {
-
-  /* border: dotted 5px blue; */
-    /* box-sizing: border-box; */
-
-  /* width: 100%; */
-  /* height: 100%; */
-  /* z-index: -3; */
-
-  /* Try to fix shrinking video */
-  /* height:100%; */
-  /* object-fit:contain; */
-  /* position: absolute;  */
-  /* right: 0;  */
-  /* bottom: 0; */
-  /* top: 0; */
-  /* min-width: 100%;  */
-  /* min-height:100%; */
-  /* width: auto;  */
-  /* height: auto;  */
-  /* background-size: cover; */
-
-  /* Diffrent approach of fixing shrinking video */
-    /* min-width: 100%;
-    min-height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%); */
-
-      /* min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);  */
-
-  /* width: 100%;
-  height: 100%;
-  object-fit:fill;
-  display: block; */
-
-    /* width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block; */
-
-  /* width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-     */
-
-  /* Make video to at least 100% wide and tall */
-  /* min-width: 100%;  */
-  /* min-height: 100%;  */
- 
-  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
-  /* width: auto; */
-  /* height: auto; */
-
-  /* Center the video */
-  /* position: absolute; */
-  /* top: 50%; */
-  /* left: 50%; */
-  /* transform: translate(-50%,-50%); */
-  /* object-fit: cover; */
-  /* object-fit: contain; */
-  /* object-fit: fill; */
- }
-
  @media only screen and (max-width: 768px) {
    .video-container video {
   min-width: 100%; 
@@ -157,9 +39,10 @@ html {
   transform: translate(-50%,-50%) scale(0.5);
  }
 } 
+/* ↑ ✓ Video po refaktoryzacji ✓ ↑ */
 
 
-
+/* 🛠 ↓ Refaktoryzuję top menu ↓ 🛠 */
 .logo {
   filter: brightness(0) invert(1);
   width: clamp(25px, 6vw, 300px);
@@ -373,8 +256,7 @@ h6 {
 }
 
 
-/*  ✓ footer po refaktoryzacji ✓ */
-
+/* ↓ ✓ footer po refaktoryzacji ✓ ↓ */
 footer {
   background: #000;
   color: #ffffff;
@@ -389,7 +271,6 @@ footer {
   /* margin-top: 30px; */
     /* justify-content: center; */
 }
-
 /* ⓘten wrapper jednak okazał się zbędny */
 .footer-wrapper {
   /* display: flex; */
@@ -404,32 +285,25 @@ footer {
   display: flex;
   /* justify-content: center; */
   /* align-items: space-evenly; */
-
     gap: 1.5em;
-    /*ⓘ ^odstęp^ MIĘDZY elementami PIONOWY */
-
+    /*ⓘ ↑odstęp↑ MIĘDZY elementami PIONOWY */
     padding: 1.5em;
-    /*ⓘ ^odstęp^ OD KRAWĘDZI kontenera  */
-
+    /*ⓘ ↑odstęp↑ OD KRAWĘDZI kontenera  */
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
 .footer-button{
   color: red;
   color: #ffffff;
   text-decoration: none;
   font-size: 16px;
   line-height: 1.2;
-
 /* daje ~40–44px wysokości */
   /* padding: 16px;  */
-
   /* min-height: 44px; */
   /* padding: 44px; */
   /* margin: 4rem; */
 }
-
 .footer-menu__copyright {
   display: flex;
   justify-content: center;
@@ -437,58 +311,12 @@ footer {
   flex-basis: 100%;
   text-align: center;
 }
-
 /* ↑ ✓ footer po refaktoryzacji ✓ ↑ */
 
-
-/* ⚠ ważne, żeby komentarze pisać nad kodem, bo CSS nie obsługuje zagnieżdżania komentarzy i potem  trudo zakomentować*/
-
-/* 🔧 ↓ WYŁĄCZANIE video:↓ 🔧 */
-/* video{ display: none; *{ background: #000; } */
-
-/* Śmieci */
-/* 
- @media only screen and (max-width: 342px) { */
-
-  /* .video-container video {
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-  } */
-
-/* } */
-
-
-/* 🐛FIX video na małych ekranach robi się zoom 🐛 */
 
 
 
 /* ↓ WYŁĄCZAM WSZYSKTKIE BRAKPOINTY ↓ */
-
-/* why top has white backgroud? */
-/* @media only screen and (max-width: 910px) {
-  .video-container {
-    width: 100%;
-    height: 100%;
-    z-index: -10;
-    top: 75px;
-    
-  }
-} */
-
-
-/* @media only screen and (max-width: 438px) {
-   .video-container {
-    width: 100%;
-    height: 100%;
-    top:120px;
-   }
-} */
-
 
 /* Mobile-S resolution */
 /* @media only screen and (max-width: 320px) {
