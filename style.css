@@ -50,23 +50,26 @@ html {
   background-position: center;
   background-repeat: no-repeat; */
 
-  position: fixed;
+  /* position: fixed;
   inset: 0;
   z-index: -3;
   overflow: hidden;
-  background: #000;
+  background: #000; */
   
-
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  /* overflow: hidden; */
+  /* ↑ powodowało ucięte napisy na laptopie ↑ */
+  z-index: -3;
 }
 
-/* 🐛 od width 342 video się zmniejsza */
-/* 🐛 od width ok. 330 napisy przestają się mieścić*/
-
-/* Teraz się zmniejsza od 612. Wcześniej chyba też tak było, ale obraz był ucięty.(CHYBA)! */
 
   /* Jaakoś tam dzaiła na małych ekranach ale 🐛jest za bardzo zoomowane🐛 */
 
-  /* @media only screen and (max-width: 342px) { */
+  /* */
 
  .video-container video {
 
@@ -80,9 +83,10 @@ html {
   /* Try to fix shrinking video */
   /* height:100%; */
   /* object-fit:contain; */
-  /* position: relative;  */
+  /* position: absolute;  */
   /* right: 0;  */
   /* bottom: 0; */
+  /* top: 0; */
   /* min-width: 100%;  */
   /* min-height:100%; */
   /* width: auto;  */
@@ -97,7 +101,6 @@ html {
     left: 50%;
     transform: translateX(-50%) translateY(-50%); */
 
-  
       /* min-width: 100%;
     min-height: 100%;
     object-fit: cover;
@@ -117,33 +120,43 @@ html {
   object-position: center;
   display: block; */
 
-    /* width: 100%;
+  /* width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  display: block; */
-/* 
-    margin-top: -50vw;
-  margin-right: -50vw;
-   object-fit: fill;  */
+  display: block;
+     */
 
-    
-   /* position: absolute; */
-  /* top: 50%; */
-  /* left: 50%; */
-  /* min-width: 100%; */
-  /* min-height: 100%; */
+  /* Make video to at least 100% wide and tall */
+  /* min-width: 100%;  */
+  /* min-height: 100%;  */
+ 
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
   /* width: auto; */
   /* height: auto; */
+
+  /* Center the video */
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%,-50%); */
   /* object-fit: cover; */
-
-  /* !  TO USTAWIENIE, PLUS DOPRACOWAĆ BREAK POINT i scale,   ! */
   /* object-fit: contain; */
-  /* transform: translate(-50%, -50%) scale(0.7); */
-  
-  }
-/* } */
+  /* object-fit: fill; */
+ }
 
+ @media only screen and (max-width: 768px) {
+   .video-container video {
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.5);
+ }
+} 
 
 
 
@@ -253,6 +266,7 @@ h6 {
   display: flex;
   font-size: clamp(10px, 1.2vw, 18px); /* zmniejszone max */
   color: #ffffff;
+  justify-content: center;
 }
 .pro-container {
   display: flex;
