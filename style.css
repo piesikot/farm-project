@@ -183,7 +183,9 @@ h6 {
 
  /* ⚠ ⓘ  🔧↓   JAK WYŁĄCZĘ TEN KOLOR TO CAŁA STRONA SIĘ PRZEWIJA NA TLE FILMIKU :O  tylko polish-quality i stopka zakrywają↓  */
   background: white;
-/* ↑ 🔧 aha bo to jest klamra do klasy farm */
+/* ↑ 🔧 */
+/* aha bo to jest klamra do klasy farm */
+/* ale farm się zaczyna dopiero  prosach, hmm dlaczego tło blokuje rozpływanie się filmu? I dlaczego potem stopka już tego rozpływanie nie blokuje (choć zakrywa)? */
 
   display: flex;
   justify-content: center;
@@ -192,6 +194,8 @@ h6 {
   font-size: clamp(10px, 1.2vw, 18px); /* zmniejszone max */
   padding: 40px;
 }
+
+
 
 .polish-quality-container{
   background-color: black;
@@ -219,7 +223,8 @@ h6 {
   /* gap: 40px; */
 }
 .farm__products-container__products-header-description h2 {
-  font-size: clamp(12px, 1.4vw, 22px); /* mniejsze max */
+  font-size: clamp(12px, 1.4vw, 22px); 
+  color: black;
 }
 .farm__products-container__products-header-footer {
   font-size: clamp(10px, 1.1vw, 16px); /* mniejsze max */
