@@ -1,6 +1,5 @@
 /* ⚠ ważne, żeby komentarze pisać nad kodem, bo CSS nie obsługuje zagnieżdżania komentarzy i potem  trudo zakomentować*/
 
-
 /* 🛠 ↓ Refaktoryzuję fonty, rozmiary i menu ↓ 🛠 */
 /* - Zrobić czarne menu i czarne tło pod video */
 body,
@@ -16,7 +15,6 @@ html {
 
 /* 🔧 ↓ WYŁĄCZANIE video:↓ 🔧 */
 /* video {display: none;} */
-
 
 /* ↓  ✓ Video po refaktoryzacji ↓ ✓ */
 .video-container {
@@ -182,9 +180,11 @@ h6 {
   /* !zrobić czarne tło pod video wtedy da się ukryć bug, chociaż tymczasowo */
 .farm {
   color: #000;
-  background: #ffffff;
 
-  /* background: rgb(0, 0, 0); */
+ /* ⚠ ⓘ  🔧↓   JAK WYŁĄCZĘ TEN KOLOR TO CAŁA STRONA SIĘ PRZEWIJA NA TLE FILMIKU :O  tylko polish-quality i stopka zakrywają↓  */
+  background: white;
+/* ↑ 🔧 aha bo to jest klamra do klasy farm */
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,29 +192,25 @@ h6 {
   font-size: clamp(10px, 1.2vw, 18px); /* zmniejszone max */
   padding: 40px;
 }
-.farm__farm-img {
+
+.polish-quality-container{
+  background-color: black;
+  width: 100%;
+  /* width: 100vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.polish-quality-container-img{
   width: 15em;
+  padding: 5em;;
 }
 
-/* .farm__farm-title{
-    font-size: clamp(10px, 2vw, 72px);
-} */
 
-/* .farm__farm-description{
-    text-align: center;
-} */
+    /* correct products-main padding */
 
-/* .chart{
-    width: 300px;
-} */
-
-/*  correct farm-img size
-    correct products-header-img size
-    correct products-main padding
-*/
 
 /* WTF!? */
-
 .farm__products-header-container {
   display: flex;
   justify-content: center;
