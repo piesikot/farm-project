@@ -10,10 +10,10 @@ html {
 .container {
   z-index: -10;
   max-width: 100%;
-  height: 100%;
+  height: 100%; 
 }
 
-/* 🔧 ↓ WYŁĄCZANIE video:↓ 🔧 */
+/* 🔧 ↓ WŁĄCZNIK video:↓ 🔧 */
 /* video {display: none;} */
 
 /* ↓  ✓ Video po refaktoryzacji ↓ ✓ */
@@ -22,8 +22,12 @@ html {
   inset: 0;
   z-index: -3;
   overflow: hidden;
-  background: #000;
+  /* background: #000; */
+  /* background: red; */
   /* background: #000 url('path/to/image.jpg') center/cover; */
+
+  /* tutaj sprawdzić czy przy paskach przy za bardzo zeskalowanym video też jest białe tło, i wtedy zrobię białe menu - tak robi się białe, czyli nie jestem skazany na czarne menu i czarne tło w polish-quality!*/
+  background: white;
 }
  @media only screen and (max-width: 768px) {
    .video-container video {
@@ -69,8 +73,6 @@ html {
   /* background-color: #ffffff; */
   /* z-index: -4 !important; */
   /* why not working? */
-
-
   /* opacity: 0.5; */
 }
 .wrapper h1, h2{
@@ -196,18 +198,20 @@ h6 {
 }
 
 
-
 .polish-quality-container{
-  background-color: black;
+  /* background: linear-gradient(to bottom, black, white); */
+    /* background: linear-gradient(to bottom, red, white); */
   width: 100%;
   /* width: 100vw; */
   display: flex;
   justify-content: center;
   align-items: center;
+  background: white;
 }
 .polish-quality-container-img{
   width: 15em;
-  padding: 5em;;
+  padding: 5em;
+  /* width: 100%; */
 }
 
 
