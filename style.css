@@ -2,6 +2,9 @@
 
 /* 🛠 ↓ Refaktoryzuję fonty, rozmiary i menu ↓ 🛠 */
 /* - Zrobić czarne menu i czarne tło pod video */
+
+ * { box-sizing: border-box; } 
+
 body,
 html {
   margin: 0;
@@ -47,12 +50,13 @@ html {
 /* 🛠 ↓ Refaktoryzuję top menu ↓ 🛠 */
 .logo {
   filter: brightness(0) invert(1);
-  width: clamp(25px, 6vw, 300px);
+  width: clamp(50px, 10vw, 300px);
   padding: 2vw;
 }
 .logo-container-media {
   display: none;
 }
+
 /* ⚠ 🐛 Wielkość .top ma ogromny wpływa zachowanie video!  */
 .top {
   display: flex;
@@ -65,6 +69,7 @@ html {
   /* position: sticky; */
   /* top: 0; */
 }
+
 .bottom {
   display: none;
 }
@@ -198,7 +203,7 @@ h6 {
 }
 
 
-.polish-quality-container{
+.polish-quality-container{  
   /* background: linear-gradient(to bottom, black, white); */
     /* background: linear-gradient(to bottom, red, white); */
   width: 100%;
@@ -209,13 +214,10 @@ h6 {
   background: white;
 }
 .polish-quality-container-img{
-  width: 15em;
+  width: clamp(400px, 50vw, 600px);
   padding: 5em;
   /* width: 100%; */
 }
-
-
-    /* correct products-main padding */
 
 
 /* WTF!? */
@@ -231,17 +233,17 @@ h6 {
   color: black;
 }
 .farm__products-container__products-header-footer {
-  font-size: clamp(10px, 1.1vw, 16px); /* mniejsze max */
+  font-size: clamp(10px, 1.1vw, 16px); 
 }
 .farm__products-header-container__products-header-img {
-  width: 5em;
-  padding: 40px;
+  width: 18em;
+  padding: 3em;
 }
 .farm__products-header-container__wrap {
   display: flex;
   flex-direction: column;
   /* color: aqua; */
-  padding: 80px 0px 80px 0px;
+  /* padding: 80px 0px 80px 0px; */
 }
 .farm__products-main-container__products-main {
   display: flex;
@@ -254,7 +256,6 @@ h6 {
 }
 .farm__products-main-container__products-main__products-main-title h3 {
   padding: 20px;
-  font-weight: 666;
 }
 .farm__products-main-container__products-main__products-main-description {
   font-size: clamp(12px, 1.2vw, 18px); /* zmniejszone max */
