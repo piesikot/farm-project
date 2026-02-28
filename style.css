@@ -1,4 +1,4 @@
-/* ⚠ ważne, żeby komentarze pisać nad kodem, bo CSS nie obsługuje zagnieżdżania komentarzy i potem  trudo zakomentować*/
+/* ⚠ Ważne, żeby komentarze pisać nad kodem, bo CSS nie obsługuje zagnieżdżania komentarzy i potem  trudo zakomentować*/
 
 /* 🛠 ↓ Refaktoryzuję fonty, rozmiary i menu ↓ 🛠 */
 /* - Zrobić czarne menu i czarne tło pod video */
@@ -62,7 +62,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: whitesmoke; */
+  /* background-color: black; */
   /* opacity: 0.7; */
   /* border-radius: 10px; */
   /* height: 5vh; */
